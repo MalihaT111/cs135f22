@@ -1,9 +1,10 @@
-//
-//  main.cpp
-//  day1hw
-//
-//  Created by Maliha Tasnim on 12/21/22.
-//
+/*
+Author: Maliha Tasnim
+Course: CSCI-135
+Instructor: Genady Maryash
+Assignment: Homework E1.7, E2.1
+Assignment Details Below. 
+*/
 
 #include <iostream>
 using namespace std;
