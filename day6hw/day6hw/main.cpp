@@ -7,7 +7,6 @@ Assignment Details Below.
 */
 //E3.5: write a program that reads numbers and prints increasing if they are in increasing order, decreasing if they are in decreasing order, and neither if not either
 #include<iostream>
-#include<float.h>
 #include<cmath>
 using namespace std;
 void sequence()
