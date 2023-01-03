@@ -112,8 +112,9 @@ void taskc()
     string s;
     while(cin >> s)
     {
-        for (char st: s)
+        for (int i = 0; i < s.length(); i++)
         {
+            char st = s[i];
             if (st == ';')
             {
                 if (r == 4 && c == 5)
@@ -154,8 +155,16 @@ void taskc()
 
 
 // Task D:
+void taskd()
+{
+    
+}
+
 int main ()
 {
     //taska();
-    taskb();
+    //taskb();
+    //taskc();
+    //taskd();
 }
+
