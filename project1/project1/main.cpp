@@ -132,39 +132,94 @@ void taskc()
             else if (st == 'R' && maze[r][c+1] != 1 && r < 6 && c < 6)
                 {
                     c++;
-                    cout << r << " " << c << endl ;
+                    cout << r << " " << c << endl;
                 }
             else if (st == 'L' && maze[r][c-1] != 1 && r < 6 && c < 6)
                 {
                         c--;
-                    cout << r << " " << c << endl ;
+                    cout << r << " " << c << endl;
                 }
             else if (st == 'D' && maze[r+1][c] != 1 && r < 6 && c < 6)
                 {
                     r++;
-                    cout << r << " " << c << endl ;
+                    cout << r << " " << c << endl;
                 }
             else if (st == 'U' && maze[r-1][c] != 1 && r < 6 && c < 6)
                 {
                     r--;
-                    cout << r << " " << c << endl ;
+                    cout << r << " " << c << endl;
                 }
         }
     }
 }
 
 
-// Task D:
+// Task D: stream in a maze and set up the array then take in directions to see if they can traverse the custom maze
 void taskd()
 {
-    
+    int maze[10][10];
+    string s, j;
+    int mazeb, startr, startc, endr, endc, r, c;
+    //populate the maze
+    for (int row = 0; row < 10; row++)
+    {
+        for (int col = 0; col < 10; col++)
+        {
+            cin >> mazeb;
+            maze[row][col] = mazeb;
+        }
+    }
+    //populate start and end variables and take care of the semicolon inbetween
+    cin >> startr >> startc >> endr >> endc >> j;
+    r = startr;
+    c = startc;
+    while(cin >> s)
+    {
+        for (int i = 0; i < s.length(); i++)
+        {
+            char st = s[i];
+            if (st == ';')
+            {
+                if (r == endr && c == endc)
+                {
+                    cout << "You got out of the maze." << endl;
+                }
+                else
+                {
+                    cout << "You are stuck in the maze." << endl;
+                }
+                r = startr;
+                c = startc;
+            }
+
+            else if (st == 'R' && maze[r][c+1] != 1 && r < 10 && c < 10 && r > -1 && c > -1)
+                {
+                    c++;
+                    cout << r << " " << c << endl;
+                }
+            else if (st == 'L' && maze[r][c-1] != 1 && r < 10 && c < 10 && r > -1 && c > -1)
+                {
+                        c--;
+                    cout << r << " " << c << endl;
+                }
+            else if (st == 'D' && maze[r+1][c] != 1 && r < 10 && c < 10 && r > -1 && c > -1)
+                {
+                    r++;
+                    cout << r << " " << c << endl;
+                }
+            else if (st == 'U' && maze[r-1][c] != 1 && r < 10 && c < 10 && r > -1 && c > -1)
+                {
+                    r--;
+                    cout << r << " " << c << endl;
+                }
+        }
+    }
 }
 
 int main ()
 {
-    //taska();
-    //taskb();
-    //taskc();
-    //taskd();
+    taska();
+    taskb();
+    taskc();
+    taskd();
 }
-
